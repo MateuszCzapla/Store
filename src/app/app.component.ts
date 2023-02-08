@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<div class="bg-success p-2 text-white">
-  Tu powstaje aplikacja Store.
-  </div>`
+  template: "<store></store>"
   //templateUrl: './app.component.html',
   //styleUrls: ['./app.component.css']
 })
