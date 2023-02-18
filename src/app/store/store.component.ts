@@ -8,7 +8,7 @@ import { ProductRepository } from "../model/product.repository";
 })
 
 export class StoreComponent{
-    public selectedCategory = "";
+    public selectedCategory:string = null;
 
     constructor(private repository: ProductRepository){}
 
