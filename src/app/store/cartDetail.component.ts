@@ -1,6 +1,14 @@
-import { Component } from "@angular/core"
+import { Component } from "@angular/core";
+import { Cart } from "../model/cart.model";
+import { ConnectionService } from "../model/connection.service";
 
 @Component({
-    template: `<div><h3>Zawartość koszyka</h3></div>`
+    templateUrl: "cartDetail.component.html"
 })
-export class CartDetailComponent { }
+export class CartDetailComponent {
+    public connected: boolean = true;
+    constructor(cart: Cart, private connection: ConnectionService) {
+        this.connected = this.connection.connected;
+        connection.Changes.subscribe((state) =>this.connected = state)
+    }
+}
