@@ -59,8 +59,8 @@
                 <button class="btn btn-primary m-1" routerLink="/store">
                     Kontynuuj zakupy
                 </button>
-                <button class="btn btn-secondary m-1" routerLink="/checkout" [disabled]="cart.lines.length == 0 || !connected">
-                    {{ connected ? 'Do kasy' : 'Offline' }}
+                <button class="btn btn-secondary m-1" routerLink="/checkout" [disabled]="cart.lines.length == 0">
+                    Do kasy
                 </button>
             </div>
         </div>
